@@ -25,7 +25,7 @@ int main() {
     srand(time(0));
 
     while (true) {
-        cout << "\nWelcome to E-Commerce Shopping Assistant testing\n";
+        cout << "\nWelcome to E-Commerce Shopping Assistant\n";
         cout << "Choose a category:\n";
         cout << "1. Electronics\n2. Clothing\n3. Groceries\n4. Books\n5. Exit\n";
         cout << "Enter your choice: ";
