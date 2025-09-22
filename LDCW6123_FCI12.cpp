@@ -90,13 +90,51 @@ int main() {
         }
         
         cout << "\nDo you want to continue shopping?\n";
-        cout << "1. Yes\n2. No (Exit)\n";
+        cout << "1. Yes\n2. No (Proceed to payment)\n";
         cout << "Enter your choice: ";
         cin >> continueChoice;
 
         if (continueChoice == 2) {
-            cout << "\nYour order ID is " + generateOrderID();
-            cout << ".\nThank you for shopping with us. Goodbye!\n";
+            // Wrap
+            cout << "\nAll input outside of option will be default to first choice.";
+            cout << "\nDo you want gift wrapping?\n";
+            cout << "1. Yes\n2. No\n";
+            cout << "Enter your choice: ";
+            cin >> wrapChoice;
+            if (wrapChoice == 1) wrapOption = "Yes";
+            else if (wrapChoice == 2) wrapOption = "No";
+            else { cout << "Invalid choice. Defaulting to No.\n"; wrapOption = "No"; }
+
+            // Courier
+            cout << "\nChoose Courier Service:\n";
+            cout << "1. J&T\n2. DHL\n3. PosLaju\n";
+            cout << "Enter your choice: ";
+            cin >> courierChoice;
+            if (courierChoice == 1) courierService = "J&T";
+            else if (courierChoice == 2) courierService = "DHL";
+            else if (courierChoice == 3) courierService = "PosLaju";
+            else { cout << "Invalid choice. Defaulting to J&T.\n"; courierService = "J&T"; }
+
+            // Payment method
+            cout << "\nChoose Payment Method:\n";
+            cout << "1. Online Banking\n2. Credit Card\n3. E-Wallet\n";
+            cout << "Enter your choice: ";
+            cin >> paymentChoice;
+            if (paymentChoice == 1) paymentMethod = "Credit Card";
+            else if (paymentChoice == 2) paymentMethod = "Online Banking";
+            else if (paymentChoice == 3) paymentMethod = "E-Wallet";
+            else { cout << "Invalid choice. Defaulting to Online Banking.\n"; paymentMethod = "Online Banking"; }
+
+            string orderID = generateOrderID();
+
+            cout << "\n===== Order Summary =====\n";
+            cout << "Order ID      : " << orderID << endl;
+            cout << "Product       : " << productName << endl;
+            cout << "Courier       : " << courierService << endl;
+            cout << "Gift Wrapping : " << wrapOption << endl;
+            cout << "Payment Method: " << paymentMethod << endl;
+            cout << "=========================\n";
+            cout << "Thank you for your purchase!\n";
             break;
         }
     }
