@@ -87,7 +87,17 @@ int main() {
             default:
                 cout << "Invalid choice. Returning to main menu...\n";
                 continue;
-        } 
+        }
+        
+        cout << "\nDo you want to continue shopping?\n";
+        cout << "1. Yes\n2. No (Exit)\n";
+        cout << "Enter your choice: ";
+        cin >> continueChoice;
+
+        if (continueChoice == 2) {
+            cout << "Thank you for shopping with us. Goodbye!\n";
+            break;
+        }
     }
     return 0;
 }
