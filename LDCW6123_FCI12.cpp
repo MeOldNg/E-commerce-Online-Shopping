@@ -95,7 +95,8 @@ int main() {
         cin >> continueChoice;
 
         if (continueChoice == 2) {
-            cout << "Thank you for shopping with us. Goodbye!\n";
+            cout << "\nYour order ID is " + generateOrderID();
+            cout << ".\nThank you for shopping with us. Goodbye!\n";
             break;
         }
     }
