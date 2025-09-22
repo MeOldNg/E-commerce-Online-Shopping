@@ -2,6 +2,7 @@
 #include <cstdlib>   // for rand(), srand()
 #include <ctime>     // for time()
 #include <string>
+#include <iomanip>
 using namespace std;
 
 // Function to generate random alphanumeric Order ID
@@ -19,7 +20,7 @@ string generateOrderID() {
 
 int main() {
     int categoryChoice, productChoice, courierChoice, wrapChoice;
-    int paymentChoice, installmentChoice, continueChoice, patternChoice;
+    int paymentChoice, continueChoice;
     string productName, courierService, wrapOption, paymentMethod;
 
     double price = 0;
@@ -134,15 +135,24 @@ int main() {
             string orderID = generateOrderID();
 
             // Print Receipt
-            cout << "\n===== Order Summary =====\n";
-            cout << "Order ID      : " << orderID << endl;
-            cout << "Product       : " << productName << endl;
-            cout << "Courier       : " << courierService << endl;
-            cout << "Gift Wrapping : " << wrapOption << endl;
-            cout << "Total Price   : RM " << price << endl;
-            cout << "Payment Method: " << paymentMethod << endl;
-            cout << "=========================\n";
-            cout << "Thank you for your purchase!\n";
+            cout << "\n    ______________________________" << endl;
+            cout << " / \\                              \\." << endl;
+            cout << "|   |  ===== Order Summary =====  |." << endl;
+            cout << " \\_ |                             |." << endl;
+            cout << "    |  " << left << setw(27) << ("Order ID      : " + orderID) << "|" << endl;
+            cout << "    |  " << left << setw(27) << ("Product       : " + productName) << "|" << endl;
+            cout << "    |  " << left << setw(27) << ("Courier       : " + courierService) << "|" << endl;
+            cout << "    |  " << left << setw(27) << ("Gift Wrapping : " + wrapOption) << "|" << endl;
+            cout << "    |  " << left << setw(27) << ("Total Price   : RM" + to_string((int)price)) << "|" << endl;
+            cout << "    |  " << left << setw(27) << ("Payment Method: " + paymentMethod) << "|" << endl;
+            cout << "    |                             |." << endl;
+            cout << "    |  =========================  |." << endl;
+            cout << "    |  Thank you for your         |." << endl;
+            cout << "    |  purchase!                  |." << endl;
+            cout << "    |                             |." << endl;
+            cout << "    |   __________________________|__" << endl;
+            cout << "    |  /                            /." << endl;
+            cout << "    \\_/____________________________/." << endl;
             break;
         }
     }
