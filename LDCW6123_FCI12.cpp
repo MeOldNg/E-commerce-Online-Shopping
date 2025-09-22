@@ -139,12 +139,12 @@ int main() {
             cout << " / \\                              \\." << endl;
             cout << "|   |  ===== Order Summary =====  |." << endl;
             cout << " \\_ |                             |." << endl;
-            cout << "    |  " << left << setw(27) << ("Order ID      : " + orderID) << "|" << endl;
-            cout << "    |  " << left << setw(27) << ("Product       : " + productName) << "|" << endl;
-            cout << "    |  " << left << setw(27) << ("Courier       : " + courierService) << "|" << endl;
-            cout << "    |  " << left << setw(27) << ("Gift Wrapping : " + wrapOption) << "|" << endl;
-            cout << "    |  " << left << setw(27) << ("Total Price   : RM" + to_string((int)price)) << "|" << endl;
-            cout << "    |  " << left << setw(27) << ("Payment Method: " + paymentMethod) << "|" << endl;
+            cout << "    |  " << left << setw(31) << ("Order ID      : " + orderID) << "|" << endl;
+            cout << "    |  " << left << setw(31) << ("Product       : " + productName) << "|" << endl;
+            cout << "    |  " << left << setw(31) << ("Courier       : " + courierService) << "|" << endl;
+            cout << "    |  " << left << setw(31) << ("Gift Wrapping : " + wrapOption) << "|" << endl;
+            cout << "    |  " << left << setw(31) << ("Total Price   : RM" + to_string((int)price)) << "|" << endl;
+            cout << "    |  " << left << setw(31) << ("Payment Method: " + paymentMethod) << "|" << endl;
             cout << "    |                             |." << endl;
             cout << "    |  =========================  |." << endl;
             cout << "    |  Thank you for your         |." << endl;
