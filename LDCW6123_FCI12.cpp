@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>   // for rand(), srand()
 #include <ctime>     // for time()
+#include <string>
 using namespace std;
 
 // Function to generate random alphanumeric Order ID
@@ -18,7 +19,7 @@ string generateOrderID() {
 
 int main() {
     int categoryChoice, productChoice, courierChoice, wrapChoice;
-    int paymentChoice, installmentChoice, continueChoice;
+    int paymentChoice, installmentChoice, continueChoice, patternChoice;
     string productName, courierService, wrapOption, paymentMethod;
 
     // Initialize random seed
@@ -42,11 +43,13 @@ int main() {
                 cout << "1. Smartphone\n";
                 cout << "2. Laptop\n";
                 cout << "3. Headphones\n";
-                cout << "Select a product (1-3): ";
+                cout << "4. Televisions\n";
+                cout << "Select a product (1-5): ";
                 cin >> productChoice;
                 if (productChoice == 1) productName = "Smartphone";
                 else if (productChoice == 2) productName = "Laptop";
-                else productName = "Headphones";
+                else if (productChoice == 3) productName = "Headphones";
+                else if (productChoice == 4) productName = "Televisions";
                 break;
             case 2:
                 cout << "\nClothing:\n";
@@ -57,7 +60,7 @@ int main() {
                 cin >> productChoice;
                 if (productChoice == 1) productName = "T-Shirt";
                 else if (productChoice == 2) productName = "Jeans";
-                else productName = "Jacket";
+                else if (productChoice == 3) productName = "Jacket";
                 break;
             case 3:
                 cout << "\nGroceries:\n";
@@ -68,7 +71,7 @@ int main() {
                 cin >> productChoice;
                 if (productChoice == 1) productName = "Rice (5kg)";
                 else if (productChoice == 2) productName = "Cooking Oil (2L)";
-                else productName = "Milk (1L)";
+                else if (productChoice == 3) productName = "Milk (1L)";
                 break;
             case 4:
                 cout << "\nBooks:\n";
@@ -79,11 +82,12 @@ int main() {
                 cin >> productChoice;
                 if (productChoice == 1) productName = "Novel";
                 else if (productChoice == 2) productName = "Textbook";
-                else productName = "Comic";
+                else if (productChoice == 3) productName = "Comic";
                 break;
             default:
                 cout << "Invalid choice. Returning to main menu...\n";
                 continue;
-        }
+        } 
     }
+    return 0;
 }
