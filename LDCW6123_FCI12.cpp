@@ -47,49 +47,96 @@ int main() {
                 cout << "2. Laptop (RM 3500)\n";
                 cout << "3. Headphones (RM 250)\n";
                 cout << "4. Televisions (RM 2200)\n";
-                cout << "Select a product (1-4): ";
+                cout << "5. Return to previous page.";
+                cout << "Select a product (1-5): ";
                 cin >> productChoice;
-                if (productChoice == 1) { productName = "Smartphone"; price += 1200.00; }
-                else if (productChoice == 2) { productName = "Laptop"; price += 3500.00; }
-                else if (productChoice == 3) { productName = "Headphones"; price += 250.00; }
-                else if (productChoice == 4) { productName = "Televisions"; price += 2200.00; }
-                break;
+                switch(productChoice) {
+                    case 1:
+                        productName = "Smartphone";
+                        price += 1200.00;
+                        break;
+                    case 2:
+                        productName = " Laptop";
+                        price += 3500.00;
+                        break;
+                    case 3:
+                        productName = "Headphone";
+                        price += 250.00;
+                        break;
+                    case 4: 
+                        productName = "Television";
+                        price += 2200.00;
+                        break;
+                }
 
             case 2:
                 cout << "\nClothing:\n";
                 cout << "1. T-Shirt (RM 50)\n";
                 cout << "2. Jeans (RM 120)\n";
                 cout << "3. Jacket (RM 200)\n";
-                cout << "Select a product (1-3): ";
+                cout << "4. Return to previous page.";
+                cout << "Select a product (1-4): ";
                 cin >> productChoice;
-                if (productChoice == 1) { productName = "T-Shirt"; price += 50.00; }
-                else if (productChoice == 2) { productName = "Jeans"; price += 120.00; }
-                else if (productChoice == 3) { productName = "Jacket"; price += 200.00; }
-                break;
+                switch(productChoice) {
+                    case 1:
+                        productName = "T-shirt";
+                        price += 50.00;
+                        break;
+                    case 2:
+                        productName = "Jeans";
+                        price += 120.00;
+                        break;
+                    case 3:
+                        productName = "Jacket";
+                        price += 200.00;
+                        break;
+                }
 
             case 3:
                 cout << "\nGroceries:\n";
                 cout << "1. Rice (5kg) (RM 25)\n";
                 cout << "2. Cooking Oil (2L) (RM 18)\n";
                 cout << "3. Milk (1L) (RM 6)\n";
-                cout << "Select a product (1-3): ";
+                cout << "4. Return to previous page.";
+                cout << "Select a product (1-4): ";
                 cin >> productChoice;
-                if (productChoice == 1) { productName = "Rice (5kg)"; price += 25.00; }
-                else if (productChoice == 2) { productName = "Cooking Oil (2L)"; price += 18.00; }
-                else if (productChoice == 3) { productName = "Milk (1L)"; price += 6.00; }
-                break;
+                switch(productChoice) {
+                    case 1:
+                        productName = "Rice (5Kg)";
+                        price += 25.00;
+                        break;
+                    case 2:
+                        productName = "Cooking Oil (2L)";
+                        price += 18.00;
+                        break;
+                    case 3:
+                        productName = "Milk (1L)";
+                        price += 6.00;
+                        break;
+                }
 
             case 4:
                 cout << "\nBooks:\n";
                 cout << "1. Novel (RM 35)\n";
                 cout << "2. Textbook (RM 120)\n";
                 cout << "3. Comic (RM 15)\n";
-                cout << "Select a product (1-3): ";
+                cout << "4. Return to the previous page.";
+                cout << "Select a product (1-4): ";
                 cin >> productChoice;
-                if (productChoice == 1) { productName = "Novel"; price += 35.00; }
-                else if (productChoice == 2) { productName = "Textbook"; price += 120.00; }
-                else if (productChoice == 3) { productName = "Comic"; price += 15.00; }
-                break;
+                switch(productChoice) {
+                    case 1:
+                        productName = "Novel";
+                        price += 35.00;
+                        break;
+                    case 2:
+                        productName = "Textbook";
+                        price += 120.00;
+                        break;
+                    case 3:
+                        productName = "Comic";
+                        price += 15.00;
+                        break;
+                }
 
             default:
                 cout << "Invalid choice. Returning to main menu...\n";
