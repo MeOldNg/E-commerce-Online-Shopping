@@ -1,15 +1,15 @@
 #include <iostream>
-#include <cstdlib>   // for rand(), srand()
-#include <ctime>     // for time()
+#include <cstdlib>  
+#include <ctime>     
 #include <string>
 #include <iomanip>
 using namespace std;
 
-// Function to generate random alphanumeric Order ID
+
 string generateOrderID() {
     string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     string orderID = "";
-    int length = rand() % 2 == 0 ? 8 : 9;  // randomly choose 8 or 9 chars
+    int length = rand() % 2 == 0 ? 8 : 9; 
 
     for (int i = 0; i < length; i++) {
         int randIndex = rand() % chars.size();
@@ -25,7 +25,7 @@ int main() {
 
     double price = 0;
 
-    // Initialize random seed
+   
     srand(time(0));
 
     while (true) {
@@ -149,7 +149,7 @@ int main() {
         cin >> continueChoice;
 
         if (continueChoice == 2) {
-            // Gift Wrapping
+            
             cout << "\nDo you want gift wrapping? (Extra RM 5)\n";
             cout << "1. Yes\n2. No\n";
             cout << "Enter your choice: ";
@@ -158,7 +158,7 @@ int main() {
             else if (wrapChoice == 2) { wrapOption = "No"; }
             else { cout << "Invalid choice. Defaulting to No.\n"; wrapOption = "No"; }
 
-            // Courier
+            
             cout << "\nChoose Courier Service:\n";
             cout << "1. J&T\n2. DHL\n3. PosLaju\n";
             cout << "Enter your choice: ";
@@ -168,7 +168,7 @@ int main() {
             else if (courierChoice == 3) courierService = "PosLaju";
             else { cout << "Invalid choice. Defaulting to J&T.\n"; courierService = "J&T"; }
 
-            // Payment Method
+            
             cout << "\nChoose Payment Method:\n";
             cout << "1. Online Banking\n2. Credit Card\n3. E-Wallet\n";
             cout << "Enter your choice: ";
@@ -178,10 +178,10 @@ int main() {
             else if (paymentChoice == 3) paymentMethod = "E-Wallet";
             else { cout << "Invalid choice. Defaulting to Online Banking.\n"; paymentMethod = "Online Banking"; }
 
-            // Generate Order ID
+            
             string orderID = generateOrderID();
 
-            // Print Receipt
+            
             cout << "\n    __________________________________" << endl;
             cout << " / \\                                  \\." << endl;
             cout << "|   |  ======= Order Summary =======  |." << endl;
